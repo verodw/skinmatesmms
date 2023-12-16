@@ -92,7 +92,7 @@ class RegisViewController: UIViewController {
     func showAlert(msg:String){
         
         // define alert
-        let alert = UIAlertController(title: "Login Failed", message: msg, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Register Failed", message: msg, preferredStyle: .alert)
         
         // define action
         let okAction = UIAlertAction(title: "OK", style: .cancel)
