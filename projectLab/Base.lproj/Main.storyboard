@@ -53,7 +53,7 @@
                                 <rect key="frame" x="50" y="585" width="293" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login">
-                                    <color key="baseBackgroundColor" red="0.98531919720000005" green="0.68380373719999998" blue="0.2068267167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAC-FX-7Rl"/>
@@ -73,7 +73,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_gameHI" translatesAutoresizingMaskIntoConstraints="NO" id="Frh-It-aqS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-skinmates" translatesAutoresizingMaskIntoConstraints="NO" id="Frh-It-aqS">
                                 <rect key="frame" x="20" y="119" width="353" height="268"/>
                             </imageView>
                         </subviews>
@@ -158,7 +158,7 @@
                                 <rect key="frame" x="50" y="567" width="293" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register">
-                                    <color key="baseBackgroundColor" red="0.98531919720000005" green="0.68380373719999998" blue="0.2068267167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onRegisClick:" destination="TFI-jl-6tg" eventType="touchUpInside" id="au9-pD-IcZ"/>
@@ -532,21 +532,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn5-ns-Yem">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn5-ns-Yem">
                                 <rect key="frame" x="35" y="374" width="323" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ji-7D-oBu">
-                                <rect key="frame" x="35" y="425" width="323" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" name="AccentColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity: default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qag-Y0-979">
-                                <rect key="frame" x="126" y="506" width="141" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJB-9x-SqE">
+                                <rect key="frame" x="35" y="425" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -554,46 +548,51 @@
                                 <rect key="frame" x="110" y="703" width="173" height="35"/>
                                 <color key="tintColor" red="0.98531919720000005" green="0.68380373719999998" blue="0.2068267167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add to Cart"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add Review">
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
                             </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XzL-gs-FDJ">
-                                <rect key="frame" x="149.66666666666666" y="571" width="94" height="32"/>
-                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ji-7D-oBu">
+                                <rect key="frame" x="35" y="476" width="323" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8cY-KX-Qle"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8cY-KX-Qle" firstAttribute="trailing" secondItem="ZKC-L5-qV0" secondAttribute="trailing" constant="35" id="3qi-hq-6Qh"/>
+                            <constraint firstItem="8Ji-7D-oBu" firstAttribute="top" secondItem="TJB-9x-SqE" secondAttribute="bottom" constant="30" id="5PX-fW-e82"/>
                             <constraint firstItem="DfQ-WM-nZG" firstAttribute="leading" secondItem="8cY-KX-Qle" secondAttribute="leading" constant="25" id="A8Q-mi-Skm"/>
                             <constraint firstItem="DfQ-WM-nZG" firstAttribute="top" secondItem="8cY-KX-Qle" secondAttribute="top" constant="25" id="ClX-CS-Mnl"/>
+                            <constraint firstItem="8Ji-7D-oBu" firstAttribute="leading" secondItem="8cY-KX-Qle" secondAttribute="leading" constant="35" id="Dlb-jo-E9P"/>
                             <constraint firstItem="Zn5-ns-Yem" firstAttribute="leading" secondItem="8cY-KX-Qle" secondAttribute="leading" constant="35" id="IZS-Ma-AT4"/>
                             <constraint firstItem="8cY-KX-Qle" firstAttribute="trailing" secondItem="FAW-1z-O8Z" secondAttribute="trailing" constant="110" id="J7a-6X-AVk"/>
                             <constraint firstItem="8cY-KX-Qle" firstAttribute="trailing" secondItem="DfQ-WM-nZG" secondAttribute="trailing" constant="25" id="RdU-Df-QBg"/>
-                            <constraint firstItem="8Ji-7D-oBu" firstAttribute="leading" secondItem="8cY-KX-Qle" secondAttribute="leading" constant="35" id="VSp-QX-BoT"/>
+                            <constraint firstItem="TJB-9x-SqE" firstAttribute="top" secondItem="Zn5-ns-Yem" secondAttribute="bottom" constant="30" id="S93-wZ-zXP"/>
                             <constraint firstItem="FAW-1z-O8Z" firstAttribute="leading" secondItem="8cY-KX-Qle" secondAttribute="leading" constant="110" id="Vml-84-giH"/>
                             <constraint firstItem="8cY-KX-Qle" firstAttribute="trailing" secondItem="Zn5-ns-Yem" secondAttribute="trailing" constant="35" id="WVm-In-z9z"/>
-                            <constraint firstItem="8Ji-7D-oBu" firstAttribute="top" secondItem="Zn5-ns-Yem" secondAttribute="bottom" constant="30" id="X3k-oQ-aij"/>
-                            <constraint firstItem="qag-Y0-979" firstAttribute="centerX" secondItem="FvY-Hf-Q1W" secondAttribute="centerX" id="ZH0-QT-N7H"/>
                             <constraint firstItem="Zn5-ns-Yem" firstAttribute="top" secondItem="ZKC-L5-qV0" secondAttribute="bottom" constant="30" id="ao4-gN-Bdh"/>
-                            <constraint firstItem="8cY-KX-Qle" firstAttribute="trailing" secondItem="8Ji-7D-oBu" secondAttribute="trailing" constant="35" id="cNL-WM-IJP"/>
-                            <constraint firstItem="XzL-gs-FDJ" firstAttribute="top" secondItem="qag-Y0-979" secondAttribute="bottom" constant="42" id="gT8-xb-JEq"/>
-                            <constraint firstItem="FAW-1z-O8Z" firstAttribute="top" secondItem="XzL-gs-FDJ" secondAttribute="bottom" constant="100" id="hmN-01-Mjh"/>
+                            <constraint firstItem="8cY-KX-Qle" firstAttribute="trailing" secondItem="TJB-9x-SqE" secondAttribute="trailing" constant="35" id="eWf-Zh-jvc"/>
                             <constraint firstItem="ZKC-L5-qV0" firstAttribute="top" secondItem="DfQ-WM-nZG" secondAttribute="bottom" constant="25" id="iB5-dA-aXB"/>
+                            <constraint firstItem="TJB-9x-SqE" firstAttribute="leading" secondItem="8cY-KX-Qle" secondAttribute="leading" constant="35" id="idR-gN-UdE"/>
                             <constraint firstItem="ZKC-L5-qV0" firstAttribute="leading" secondItem="8cY-KX-Qle" secondAttribute="leading" constant="35" id="qCp-he-2FM"/>
                             <constraint firstItem="8cY-KX-Qle" firstAttribute="bottom" secondItem="FAW-1z-O8Z" secondAttribute="bottom" constant="80" id="qqu-ZP-YeX"/>
-                            <constraint firstItem="XzL-gs-FDJ" firstAttribute="centerX" secondItem="FvY-Hf-Q1W" secondAttribute="centerX" id="uDv-WM-l4f"/>
+                            <constraint firstItem="8cY-KX-Qle" firstAttribute="trailing" secondItem="8Ji-7D-oBu" secondAttribute="trailing" constant="35" id="urP-IQ-WfL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8n2-jN-PJt"/>
                     <connections>
-                        <outlet property="categoryLabel" destination="Zn5-ns-Yem" id="IEU-kA-GFc"/>
-                        <outlet property="nameLabel" destination="ZKC-L5-qV0" id="5zn-EE-NIQ"/>
-                        <outlet property="priceLabel" destination="8Ji-7D-oBu" id="n7r-FM-q6y"/>
+                        <outlet property="brandLabel" destination="Zn5-ns-Yem" id="73R-QD-ASB"/>
+                        <outlet property="nameLabel" destination="ZKC-L5-qV0" id="WCL-cg-cst"/>
+                        <outlet property="priceLabel" destination="8Ji-7D-oBu" id="yIa-ZE-h1j"/>
+                        <outlet property="typeLabel" destination="TJB-9x-SqE" id="Ui9-9Q-iGo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOY-vT-P1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4140" y="-282"/>
+            <point key="canvasLocation" x="3460" y="-308"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="G5d-US-y0q">
@@ -619,7 +618,7 @@
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="logo_gameHI" width="500" height="500"/>
+        <image name="logo-skinmates" width="500" height="500"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
         <namedColor name="AccentColor">
@@ -627,6 +626,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
