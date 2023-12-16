@@ -480,10 +480,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="productCategory" destination="k6O-V0-0ie" id="VHT-s5-zDX"/>
-                                            <outlet property="productImage" destination="sLu-3o-xLY" id="uoL-fp-Tfn"/>
-                                            <outlet property="productName" destination="7Zj-0e-Stu" id="wVC-lt-GI4"/>
-                                            <outlet property="productPrice" destination="AYY-R6-j1S" id="dFR-CI-sxu"/>
+                                            <outlet property="brand" destination="k6O-V0-0ie" id="h4P-Hd-x5O"/>
+                                            <outlet property="imageProduct" destination="sLu-3o-xLY" id="X5d-xg-jaT"/>
+                                            <outlet property="name" destination="7Zj-0e-Stu" id="tuA-2e-exr"/>
+                                            <outlet property="price" destination="AYY-R6-j1S" id="01d-Sg-wHC"/>
+                                            <outlet property="type" destination="CZL-Qd-uqr" id="WZv-nn-zaD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
