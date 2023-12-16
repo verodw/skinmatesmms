@@ -15,9 +15,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var db = Database()
     var contxt: NSManagedObjectContext!
     
-    var makeupList = [Makeup]()
+    // bentuk json = key : value
+    var makeupList = [[String:Any]]()
+    let baseURL = "https://makeup-api.herokuapp.com/api/v1/products.json"
     var makeup:Makeup?
-    @IBOutlet weak var productTable: UITableView!
+    @IBOutlet weak var makeupTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +34,39 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print(activeUser!.name)
         greetingLabel.text = "Hello, \(activeUser!.name!)!"
         
-        productTable.dataSource = self
-        productTable.delegate = self
+        makeupTable.dataSource = self
+        makeupTable.delegate = self
         
-//        initData()
+        initData()
     }
     
-//    func initData(){
-//        makeupList = db.getProducts(contxt: contxt)
-//    }
+    func initData(){
+        // 1. Prepare URL
+        let url = URL(string: "\(baseURL)")
+        
+        // 2. Prepare Request
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+        
+        // 3. Execute / Call Request
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if error != nil {
+                print("Get ERROR.")
+                return
+            }
+            
+            // parse JSON
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!) as! [[String:Any]]
+                self.makeupList = json
+                DispatchQueue.main.async {
+                    self.makeupTable.reloadData()
+                }
+            }catch {
+                
+            }
+        }.resume()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         makeupList.count
@@ -49,13 +75,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell") as! ProductTableViewCell
-        cell.name.text = makeupList[indexPath.row].name
-        cell.brand.text = makeupList[indexPath.row].brand
-        cell.type.text = makeupList[indexPath.row].type
-        cell.price.text = "Rp\(makeupList[indexPath.row].price!)"
+        cell.name.text = makeupList[indexPath.row]["name"] as! String
+        cell.brand.text = makeupList[indexPath.row]["brand"] as! String
+        cell.type.text = makeupList[indexPath.row]["product_type"] as! String
+        cell.price.text = "Rp\(makeupList[indexPath.row]["price"])" as! String
         
         //
-        if let imagePath = makeupList[indexPath.row].img, let image = UIImage(contentsOfFile: imagePath) {
+        if let imagePath = makeupList[indexPath.row]["api_featured_image"], let image = UIImage(contentsOfFile: imagePath as! String) {
                // Mengatur gambar pada UIImageView jika imagePath ada dan file gambar dapat dibaca
                cell.imageProduct.image = image
            } else {
@@ -68,7 +94,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        makeup = makeupList[indexPath.row]
+//        makeup = makeupList[indexPath.row]
         
         if let nextview = storyboard?.instantiateViewController(withIdentifier: "DetailPage") {
             let detailView = nextview as! DetailViewController
