@@ -49,17 +49,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell") as! ProductTableViewCell
-        cell.productName.text = makeupList[indexPath.row].name
-        cell.productCategory.text = makeupList[indexPath.row].brand
-        cell.productPrice.text = "Rp\(makeupList[indexPath.row].price!)"
+        cell.name.text = makeupList[indexPath.row].name
+        cell.brand.text = makeupList[indexPath.row].brand
+        cell.type.text = makeupList[indexPath.row].type
+        cell.price.text = "Rp\(makeupList[indexPath.row].price!)"
         
         //
         if let imagePath = makeupList[indexPath.row].img, let image = UIImage(contentsOfFile: imagePath) {
                // Mengatur gambar pada UIImageView jika imagePath ada dan file gambar dapat dibaca
-               cell.productImage.image = image
+               cell.imageProduct.image = image
            } else {
                // Mengatur gambar default jika imagePath tidak ada atau file gambar tidak dapat dibaca
-               cell.productImage.image = UIImage(named: "defaultImage")
+               cell.imageProduct.image = UIImage(named: "defaultImage")
            }
                 
         return cell
