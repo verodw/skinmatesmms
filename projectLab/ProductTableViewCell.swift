@@ -10,11 +10,17 @@ import CoreData
 
 class ProductTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var productCategory: UILabel!
-    @IBOutlet weak var productPrice: UILabel!
+
     
+    @IBOutlet weak var imageProduct: UIImageView!
+    
+    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var brand: UILabel!
+    
+    @IBOutlet weak var type: UILabel!
+    
+    @IBOutlet weak var price: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
