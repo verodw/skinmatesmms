@@ -15,8 +15,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var db = Database()
     var contxt: NSManagedObjectContext!
     
-    var productList = [Item]()
-    var item:Item?
+    var makeupList = [Makeup]()
+    var makeup:Makeup?
     @IBOutlet weak var productTable: UITableView!
     
     override func viewDidLoad() {
@@ -35,26 +35,26 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         productTable.dataSource = self
         productTable.delegate = self
         
-        initData()
+//        initData()
     }
     
-    func initData(){
-        productList = db.getProducts(contxt: contxt)
-    }
+//    func initData(){
+//        makeupList = db.getProducts(contxt: contxt)
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productList.count
+        makeupList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell") as! ProductTableViewCell
-        cell.productName.text = productList[indexPath.row].name
-        cell.productCategory.text = productList[indexPath.row].category
-        cell.productPrice.text = "Rp\(productList[indexPath.row].price!)"
+        cell.productName.text = makeupList[indexPath.row].name
+        cell.productCategory.text = makeupList[indexPath.row].brand
+        cell.productPrice.text = "Rp\(makeupList[indexPath.row].price!)"
         
         //
-        if let imagePath = productList[indexPath.row].img, let image = UIImage(contentsOfFile: imagePath) {
+        if let imagePath = makeupList[indexPath.row].img, let image = UIImage(contentsOfFile: imagePath) {
                // Mengatur gambar pada UIImageView jika imagePath ada dan file gambar dapat dibaca
                cell.productImage.image = image
            } else {
@@ -67,12 +67,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        item = productList[indexPath.row]
+        makeup = makeupList[indexPath.row]
         
         if let nextview = storyboard?.instantiateViewController(withIdentifier: "DetailPage") {
             let detailView = nextview as! DetailViewController
 
-            detailView.item = item // atau tipe data dari variabelnya
+            detailView.makeup = makeup // atau tipe data dari variabelnya
 
             navigationController?.pushViewController(detailView, animated: true)
         }

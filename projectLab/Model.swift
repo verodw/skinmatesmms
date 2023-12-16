@@ -14,10 +14,10 @@ struct Person {
     var pass: String?
 }
 
-struct Item {
+struct Makeup {
     var name: String?
-    var category: String?
+    var brand: String?
     var price: Int?
-    var desc:String?
+    var type:String?
     var img:String?
 }
