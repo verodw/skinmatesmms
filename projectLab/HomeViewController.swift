@@ -101,13 +101,25 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.price.text = "$\(makeupList[indexPath.row]["price"]!)" as! String
         
         //
-        if let imagePath = makeupList[indexPath.row]["api_featured_image"], let image = UIImage(contentsOfFile: imagePath as! String) {
-               // Mengatur gambar pada UIImageView jika imagePath ada dan file gambar dapat dibaca
-               cell.imageProduct.image = image
+//        if let imagePath = makeupList[indexPath.row]["api_featured_image"], let image = UIImage(contentsOfFile: imagePath as! String) {
+//               // Mengatur gambar pada UIImageView jika imagePath ada dan file gambar dapat dibaca
+//               cell.imageProduct.image = image
+//           } else {
+//               // Mengatur gambar default jika imagePath tidak ada atau file gambar tidak dapat dibaca
+//               cell.imageProduct.image = UIImage(named: "defaultImage")
+//           }
+        if let imagePath = makeupList[indexPath.row]["api_featured_image"] as? String {
+            let imageUrlString = "https:" + imagePath
+            if let imageUrl = URL(string: imageUrlString), let imageData = try? Data(contentsOf: imageUrl) {
+                   let image = UIImage(data: imageData)
+                   cell.imageProduct.image = image
+               } else {
+                   cell.imageProduct.image = UIImage(named: "defaultImage")
+               }
            } else {
-               // Mengatur gambar default jika imagePath tidak ada atau file gambar tidak dapat dibaca
                cell.imageProduct.image = UIImage(named: "defaultImage")
            }
+        
                 
         return cell
     }
