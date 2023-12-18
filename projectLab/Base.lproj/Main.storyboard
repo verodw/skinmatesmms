@@ -436,6 +436,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHg-8d-Hdv">
+                                <rect key="frame" x="30" y="288" width="333" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Post Review"/>
+                                <connections>
+                                    <action selector="onPostClick:" destination="L96-Ti-2Bb" eventType="touchUpInside" id="RgE-ud-yOm"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEf-PN-cTy">
                                 <rect key="frame" x="30" y="140" width="333" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -453,15 +461,22 @@
                             <constraint firstItem="zEf-PN-cTy" firstAttribute="leading" secondItem="bF7-qh-gWA" secondAttribute="leading" constant="30" id="3Fk-KD-u1R"/>
                             <constraint firstItem="bF7-qh-gWA" firstAttribute="trailing" secondItem="rv1-DH-IPo" secondAttribute="trailing" constant="30" id="Ddw-JS-hne"/>
                             <constraint firstItem="rv1-DH-IPo" firstAttribute="leading" secondItem="bF7-qh-gWA" secondAttribute="leading" constant="30" id="JLl-6l-cOh"/>
+                            <constraint firstItem="sHg-8d-Hdv" firstAttribute="top" secondItem="rv1-DH-IPo" secondAttribute="bottom" constant="50" id="MWl-v2-HT7"/>
                             <constraint firstItem="bF7-qh-gWA" firstAttribute="trailing" secondItem="H7v-Lx-U3b" secondAttribute="trailing" constant="268" id="OcD-Bm-5YI"/>
+                            <constraint firstItem="sHg-8d-Hdv" firstAttribute="leading" secondItem="bF7-qh-gWA" secondAttribute="leading" constant="30" id="PIB-ft-4s7"/>
                             <constraint firstItem="rv1-DH-IPo" firstAttribute="top" secondItem="zEf-PN-cTy" secondAttribute="bottom" constant="30" id="UHI-2G-v7q"/>
                             <constraint firstItem="zEf-PN-cTy" firstAttribute="top" secondItem="H7v-Lx-U3b" secondAttribute="bottom" constant="30" id="UxC-xg-Gq4"/>
+                            <constraint firstItem="bF7-qh-gWA" firstAttribute="trailing" secondItem="sHg-8d-Hdv" secondAttribute="trailing" constant="30" id="iMA-JA-S9e"/>
                             <constraint firstItem="H7v-Lx-U3b" firstAttribute="leading" secondItem="bF7-qh-gWA" secondAttribute="leading" constant="30" id="nJa-ib-U0q"/>
                             <constraint firstItem="H7v-Lx-U3b" firstAttribute="top" secondItem="u8i-Av-jHC" secondAttribute="topMargin" constant="30" id="vL9-O1-qfl"/>
                             <constraint firstItem="bF7-qh-gWA" firstAttribute="trailing" secondItem="zEf-PN-cTy" secondAttribute="trailing" constant="30" id="wIC-Rh-Bfj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e5R-SV-Qgn"/>
+                    <connections>
+                        <outlet property="descField" destination="rv1-DH-IPo" id="rz8-Id-gLl"/>
+                        <outlet property="ratingField" destination="zEf-PN-cTy" id="0TC-Wv-v4i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8p-cd-frw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
