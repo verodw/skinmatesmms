@@ -683,6 +683,7 @@
                     <navigationItem key="navigationItem" id="8n2-jN-PJt"/>
                     <connections>
                         <outlet property="brandLabel" destination="Zn5-ns-Yem" id="73R-QD-ASB"/>
+                        <outlet property="makeupImageView" destination="DfQ-WM-nZG" id="mHC-hD-05f"/>
                         <outlet property="nameLabel" destination="ZKC-L5-qV0" id="WCL-cg-cst"/>
                         <outlet property="priceLabel" destination="8Ji-7D-oBu" id="yIa-ZE-h1j"/>
                         <outlet property="typeLabel" destination="TJB-9x-SqE" id="Ui9-9Q-iGo"/>
