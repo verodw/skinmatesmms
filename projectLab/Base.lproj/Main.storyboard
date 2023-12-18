@@ -433,13 +433,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review This" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7v-Lx-U3b">
                                 <rect key="frame" x="30" y="89" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.76730102300000003" green="0.29368349910000002" blue="0.49069339039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHg-8d-Hdv">
                                 <rect key="frame" x="30" y="288" width="333" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Post Review"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Post Review">
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onPostClick:" destination="L96-Ti-2Bb" eventType="touchUpInside" id="RgE-ud-yOm"/>
                                 </connections>
@@ -480,7 +482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8p-cd-frw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3453" y="377"/>
+            <point key="canvasLocation" x="3452.6717557251909" y="376.76056338028172"/>
         </scene>
         <!--Home-->
         <scene sceneID="Vvt-Gp-dOK">
@@ -683,6 +685,7 @@
                     <navigationItem key="navigationItem" id="8n2-jN-PJt"/>
                     <connections>
                         <outlet property="brandLabel" destination="Zn5-ns-Yem" id="73R-QD-ASB"/>
+                        <outlet property="makeupImageView" destination="DfQ-WM-nZG" id="mHC-hD-05f"/>
                         <outlet property="nameLabel" destination="ZKC-L5-qV0" id="WCL-cg-cst"/>
                         <outlet property="priceLabel" destination="8Ji-7D-oBu" id="yIa-ZE-h1j"/>
                         <outlet property="typeLabel" destination="TJB-9x-SqE" id="Ui9-9Q-iGo"/>
