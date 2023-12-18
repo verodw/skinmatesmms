@@ -76,7 +76,7 @@ class Database {
     
     
     func insertProduct(contxt:NSManagedObjectContext, product:Makeup) {
-
+        
         var makeupArr = [Makeup]()
 
         let entity = NSEntityDescription.entity(forEntityName: "Product", in: contxt)
@@ -104,6 +104,7 @@ class Database {
             let result = try contxt.fetch(request) as! [NSManagedObject]
 
             for data in result {
+                print(data.objectID)
                 makeupArr.append(
                     Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String))
             }
@@ -120,9 +121,8 @@ class Database {
     }
 
 
-    func getProductID(contxt:NSManagedObjectContext, name:String) -> Makeup{
-//        var product:Makeup?
-        var productID:UUID?
+    func getProduct(contxt:NSManagedObjectContext, name:String) -> Makeup{
+        var product:Makeup?
 
         // check all user
         getProducts(contxt: contxt)
@@ -135,15 +135,66 @@ class Database {
             let result = try contxt.fetch(request) as! [NSManagedObject]
 
             for data in result {
-                productID = data.objectID
-//                product = Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String)
+                product = Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String)
             }
             
         } catch {
             print("Data loading failure")
         }
 
-//        return product ?? Makeup(name: nil, brand: nil, price: nil, type: nil)
-        return productID ?? nil
+        return product ?? Makeup(name: nil, brand: nil, price: nil, type: nil)
+    }
+
+    
+    func insertReview(contxt:NSManagedObjectContext, review:MakeupReview) {
+        
+        var reviews = [MakeupReview]()
+
+        let entity = NSEntityDescription.entity(forEntityName: "Review", in: contxt)
+
+        let newReview = NSManagedObject(entity: entity!, insertInto: contxt)
+        newReview.setValue(review.userEmail, forKey: "useremail")
+        newReview.setValue(review.productName, forKey: "makeupname")
+        newReview.setValue(review.rating, forKey: "rating")
+        newReview.setValue(review.desc, forKey: "desc")
+        do {
+            try contxt.save()
+            reviews = getReviewsByProduct(contxt:contxt, productName: review.productName!)
+        } catch {
+            print("Entity creation failed")
+        }
+    }
+    
+    
+    // buat dapetin reviews nya
+    func getReviewsByProduct(contxt:NSManagedObjectContext, productName:String) -> [MakeupReview] {
+        var reviews = [MakeupReview]()
+
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Review")
+        
+        request.predicate = NSPredicate(format: "makeupname=%@", productName)
+
+        do {
+            let result = try contxt.fetch(request) as! [NSManagedObject]
+
+            for data in result {
+                reviews.append(
+                MakeupReview(
+                    userEmail: data.value(forKey: "useremail") as! String,
+                    productName: data.value(forKey: "makeupname") as! String,
+                    rating: data.value(forKey: "rating") as! String,
+                    desc: data.value(forKey: "desc") as! String
+                ))
+            }
+
+            for i in reviews {
+                print(i)
+            }
+
+        } catch {
+            print("Data loading failure")
+        }
+
+        return reviews
     }
 }

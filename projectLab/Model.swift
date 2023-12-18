@@ -21,3 +21,10 @@ struct Makeup {
     var type:String?
     var img:String?
 }
+
+struct MakeupReview {
+    var userEmail: String?
+    var productName: String?
+    var rating: String?
+    var desc: String?
+}
