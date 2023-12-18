@@ -243,57 +243,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-Zw-OR0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-Zw-OR0">
                                 <rect key="frame" x="16" y="75" width="361" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqB-xl-2aM">
-                                <rect key="frame" x="16" y="162" width="43" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ai-FI-X08">
+                                <rect key="frame" x="67" y="157" width="48" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogy-fn-EQF">
-                                <rect key="frame" x="16" y="209" width="78" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ai-FI-X08">
-                                <rect key="frame" x="16" y="115" width="48" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-1P-SuB">
-                                <rect key="frame" x="164" y="161" width="213" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-1P-SuB">
+                                <rect key="frame" x="296" y="203" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP9-GL-ndb">
-                                <rect key="frame" x="164" y="207" width="213" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP9-GL-ndb">
+                                <rect key="frame" x="263.33333333333331" y="248" width="113.66666666666669" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubK-ei-aRJ">
-                                <rect key="frame" x="164" y="115" width="213" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubK-ei-aRJ">
+                                <rect key="frame" x="294.66666666666669" y="158" width="82.333333333333314" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xl-qJ-Xtr">
-                                <rect key="frame" x="136" y="350" width="121" height="35"/>
+                                <rect key="frame" x="136" y="520" width="121" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="rectangle.portrait.and.arrow.right.fill" catalog="system" title="Log Out">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
@@ -302,13 +283,68 @@
                                     <action selector="onClikLogout:" destination="giX-Fj-JuA" eventType="touchUpInside" id="rX5-LM-ZhS"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JId-es-KkY">
+                                <rect key="frame" x="29" y="149.66666666666666" width="30" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38.670000000000002" id="254-ol-idK"/>
+                                    <constraint firstAttribute="width" constant="30" id="UgS-He-5MW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mail" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZO0-PU-dkE">
+                                <rect key="frame" x="31" y="196.33333333333331" width="27" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="5dQ-BM-0Bo"/>
+                                    <constraint firstAttribute="height" constant="37" id="RBp-5R-q2I"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogy-fn-EQF">
+                                <rect key="frame" x="67" y="248" width="78" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EV6-ov-bPU">
+                                <rect key="frame" x="30" y="242.66666666666663" width="29" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="1Ck-pE-vvS"/>
+                                    <constraint firstAttribute="width" constant="29" id="WY6-1Z-sZI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqB-xl-2aM">
+                                <rect key="frame" x="67" y="203" width="43" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QmR-nc-KyS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QmR-nc-KyS" firstAttribute="bottom" secondItem="9xl-qJ-Xtr" secondAttribute="bottom" constant="384" id="31c-o4-H7Q"/>
+                            <constraint firstItem="QmR-nc-KyS" firstAttribute="bottom" secondItem="9xl-qJ-Xtr" secondAttribute="bottom" constant="214" id="1EU-ax-oce"/>
+                            <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="9KJ-Zw-OR0" secondAttribute="trailing" constant="16" id="1kc-Qf-KFE"/>
+                            <constraint firstItem="ogy-fn-EQF" firstAttribute="top" secondItem="UqB-xl-2aM" secondAttribute="bottom" constant="23" id="48y-Qf-IIL"/>
+                            <constraint firstItem="DP9-GL-ndb" firstAttribute="top" secondItem="dN1-1P-SuB" secondAttribute="bottom" constant="24" id="5C1-hv-FgK"/>
+                            <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="dN1-1P-SuB" secondAttribute="trailing" constant="16" id="6mU-jZ-KUN"/>
                             <constraint firstItem="9xl-qJ-Xtr" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="136" id="9O6-px-bub"/>
+                            <constraint firstItem="6ai-FI-X08" firstAttribute="top" secondItem="9KJ-Zw-OR0" secondAttribute="bottom" constant="58" id="IDO-Hu-mLU"/>
+                            <constraint firstItem="ZO0-PU-dkE" firstAttribute="top" secondItem="JId-es-KkY" secondAttribute="bottom" constant="8" id="JJf-gr-P7F"/>
+                            <constraint firstItem="ogy-fn-EQF" firstAttribute="leading" secondItem="EV6-ov-bPU" secondAttribute="trailing" constant="8" symbolic="YES" id="MTF-Kf-IYP"/>
+                            <constraint firstItem="UqB-xl-2aM" firstAttribute="top" secondItem="6ai-FI-X08" secondAttribute="bottom" constant="24" id="O77-fK-AB7"/>
+                            <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="ubK-ei-aRJ" secondAttribute="trailing" constant="16" id="PvN-oW-Szo"/>
+                            <constraint firstItem="6ai-FI-X08" firstAttribute="leading" secondItem="JId-es-KkY" secondAttribute="trailing" constant="8" symbolic="YES" id="WER-w6-efb"/>
+                            <constraint firstItem="9xl-qJ-Xtr" firstAttribute="top" secondItem="ogy-fn-EQF" secondAttribute="bottom" constant="250" id="YeE-lO-z5w"/>
+                            <constraint firstItem="JId-es-KkY" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="29" id="cb7-Bi-G1F"/>
+                            <constraint firstItem="9KJ-Zw-OR0" firstAttribute="top" secondItem="QmR-nc-KyS" secondAttribute="top" constant="16" id="fja-PP-o1t"/>
+                            <constraint firstItem="ZO0-PU-dkE" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="31" id="g07-Wa-glg"/>
+                            <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="DP9-GL-ndb" secondAttribute="trailing" constant="16" id="i1a-so-Xi9"/>
+                            <constraint firstItem="dN1-1P-SuB" firstAttribute="top" secondItem="ubK-ei-aRJ" secondAttribute="bottom" constant="24" id="i8x-zs-tNH"/>
+                            <constraint firstItem="EV6-ov-bPU" firstAttribute="top" secondItem="ZO0-PU-dkE" secondAttribute="bottom" constant="10" id="idh-ww-O7A"/>
+                            <constraint firstItem="UqB-xl-2aM" firstAttribute="leading" secondItem="ZO0-PU-dkE" secondAttribute="trailing" constant="9" id="lc7-GM-R4F"/>
+                            <constraint firstItem="9KJ-Zw-OR0" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="16" id="pEu-Ba-hog"/>
+                            <constraint firstItem="EV6-ov-bPU" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="30" id="q3H-a2-59E"/>
                             <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="9xl-qJ-Xtr" secondAttribute="trailing" constant="136" id="teY-gA-8ah"/>
+                            <constraint firstItem="ubK-ei-aRJ" firstAttribute="top" secondItem="9KJ-Zw-OR0" secondAttribute="bottom" constant="59" id="xSh-HF-iPm"/>
+                            <constraint firstItem="JId-es-KkY" firstAttribute="top" secondItem="9KJ-Zw-OR0" secondAttribute="bottom" constant="49" id="zkp-nN-Psl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="YC5-Ng-3DF"/>
@@ -791,7 +827,10 @@
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="colorbg" width="393" height="852"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="lock" catalog="system" width="125" height="128"/>
         <image name="logo-skinmates" width="500" height="500"/>
+        <image name="mail" catalog="system" width="128" height="93"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
         <namedColor name="AccentColor">
