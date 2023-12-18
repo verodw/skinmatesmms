@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // bentuk json = key : value
     var makeupList = [[String:Any]]()
-    let baseURL = "https://makeup-api.herokuapp.com/api/v1/products.json"
+    let baseURL = "https://makeup-api.herokuapp.com/api/v1/products.json?rating_greater_than=3.5&rating_less_than=5.0&price_greater_than=5.0"
     var makeup:Makeup?
     @IBOutlet weak var makeupTable: UITableView!
     
@@ -78,7 +78,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.name.text = makeupList[indexPath.row]["name"] as! String
         cell.brand.text = makeupList[indexPath.row]["brand"] as! String
         cell.type.text = makeupList[indexPath.row]["product_type"] as! String
-        cell.price.text = "Rp\(makeupList[indexPath.row]["price"])" as! String
+        cell.price.text = "$\(makeupList[indexPath.row]["price"]!)" as! String
         
         //
         if let imagePath = makeupList[indexPath.row]["api_featured_image"], let image = UIImage(contentsOfFile: imagePath as! String) {
@@ -94,7 +94,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        makeup = makeupList[indexPath.row]
+        makeup = Makeup(
+            name: makeupList[indexPath.row]["name"] as! String,
+            brand: makeupList[indexPath.row]["brand"] as! String,
+            price: Double(makeupList[indexPath.row]["price"] as! String),
+            type: makeupList[indexPath.row]["product_type"] as! String,
+            img: makeupList[indexPath.row]["api_featured_image"] as! String
+        )
         
         if let nextview = storyboard?.instantiateViewController(withIdentifier: "DetailPage") {
             let detailView = nextview as! DetailViewController
