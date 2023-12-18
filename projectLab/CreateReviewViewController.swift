@@ -10,7 +10,9 @@ import UIKit
 class CreateReviewViewController: UIViewController {
     
     var makeup:Makeup?
-
+    @IBOutlet weak var ratingField: UITextField!
+    @IBOutlet weak var descField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,14 +21,9 @@ class CreateReviewViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onPostClick(_ sender: Any) {
+        
     }
-    */
+    
 
 }
