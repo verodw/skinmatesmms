@@ -11,7 +11,6 @@ class DetailViewController: UIViewController {
     
     var makeup:Makeup?
     
- 
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var brandLabel: UILabel!
@@ -31,6 +30,12 @@ class DetailViewController: UIViewController {
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createReviewSegue" {
+                if let nextPage = segue.destination as? CreateReviewViewController {
+                    nextPage.makeup = makeup
+            }
+        }
+    }
 
 }

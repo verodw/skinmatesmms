@@ -71,6 +71,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         var brand = makeup["brand"] as? String
                         let price = makeup["price"] as! String
                         let type = makeup["product_type"] as! String
+                        // karena dalam api terdapat brand dengan nilai null, maka agar program tidak error saya set jadi string "null"
                         if(brand == nil){
                             brand = "Null"
                         }
@@ -113,18 +114,29 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let name = makeupList[indexPath.row]["name"] as! String
+        var brand = makeupList[indexPath.row]["brand"] as? String
+        let price = makeupList[indexPath.row]["price"] as! String
+        let type = makeupList[indexPath.row]["product_type"] as! String
+        let img = makeupList[indexPath.row]["api_featured_image"] as! String
+        
+        // karena dalam api terdapat brand dengan nilai null, maka agar program tidak error saya set jadi string "null"
+        if(brand == nil){
+            brand = "Null"
+        }
+        
         makeup = Makeup(
-            name: makeupList[indexPath.row]["name"] as! String,
-            brand: makeupList[indexPath.row]["brand"] as! String,
-            price: makeupList[indexPath.row]["price"] as! String,
-            type: makeupList[indexPath.row]["product_type"] as! String,
-            img: makeupList[indexPath.row]["api_featured_image"] as! String
+            name: name,
+            brand: brand,
+            price: price,
+            type: type,
+            img: img
         )
         
         if let nextview = storyboard?.instantiateViewController(withIdentifier: "DetailPage") {
             let detailView = nextview as! DetailViewController
 
-            detailView.makeup = makeup // atau tipe data dari variabelnya
+            detailView.makeup = makeup
 
             navigationController?.pushViewController(detailView, animated: true)
         }

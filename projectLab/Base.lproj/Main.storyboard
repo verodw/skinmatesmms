@@ -422,6 +422,51 @@
             </objects>
             <point key="canvasLocation" x="2612.9770992366412" y="355.63380281690144"/>
         </scene>
+        <!--Create Review View Controller-->
+        <scene sceneID="fvi-06-4WN">
+            <objects>
+                <viewController storyboardIdentifier="Create Review Page" id="L96-Ti-2Bb" customClass="CreateReviewViewController" customModule="projectLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u8i-Av-jHC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review This" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7v-Lx-U3b">
+                                <rect key="frame" x="30" y="89" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEf-PN-cTy">
+                                <rect key="frame" x="30" y="140" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rv1-DH-IPo">
+                                <rect key="frame" x="30" y="204" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bF7-qh-gWA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zEf-PN-cTy" firstAttribute="leading" secondItem="bF7-qh-gWA" secondAttribute="leading" constant="30" id="3Fk-KD-u1R"/>
+                            <constraint firstItem="bF7-qh-gWA" firstAttribute="trailing" secondItem="rv1-DH-IPo" secondAttribute="trailing" constant="30" id="Ddw-JS-hne"/>
+                            <constraint firstItem="rv1-DH-IPo" firstAttribute="leading" secondItem="bF7-qh-gWA" secondAttribute="leading" constant="30" id="JLl-6l-cOh"/>
+                            <constraint firstItem="bF7-qh-gWA" firstAttribute="trailing" secondItem="H7v-Lx-U3b" secondAttribute="trailing" constant="268" id="OcD-Bm-5YI"/>
+                            <constraint firstItem="rv1-DH-IPo" firstAttribute="top" secondItem="zEf-PN-cTy" secondAttribute="bottom" constant="30" id="UHI-2G-v7q"/>
+                            <constraint firstItem="zEf-PN-cTy" firstAttribute="top" secondItem="H7v-Lx-U3b" secondAttribute="bottom" constant="30" id="UxC-xg-Gq4"/>
+                            <constraint firstItem="H7v-Lx-U3b" firstAttribute="leading" secondItem="bF7-qh-gWA" secondAttribute="leading" constant="30" id="nJa-ib-U0q"/>
+                            <constraint firstItem="H7v-Lx-U3b" firstAttribute="top" secondItem="u8i-Av-jHC" secondAttribute="topMargin" constant="30" id="vL9-O1-qfl"/>
+                            <constraint firstItem="bF7-qh-gWA" firstAttribute="trailing" secondItem="zEf-PN-cTy" secondAttribute="trailing" constant="30" id="wIC-Rh-Bfj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e5R-SV-Qgn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8p-cd-frw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3453" y="377"/>
+        </scene>
         <!--Home-->
         <scene sceneID="Vvt-Gp-dOK">
             <objects>
@@ -575,6 +620,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Add Review">
                                     <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="L96-Ti-2Bb" kind="show" identifier="createReviewSegue" id="Hh6-58-WFL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ji-7D-oBu">
                                 <rect key="frame" x="35" y="476" width="323" height="22"/>
@@ -586,6 +634,9 @@
                                 <rect key="frame" x="148" y="563" width="97" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="See More"/>
+                                <connections>
+                                    <segue destination="Nrj-eL-dfy" kind="show" id="Pit-aR-DG8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8cY-KX-Qle"/>
@@ -626,12 +677,12 @@
             </objects>
             <point key="canvasLocation" x="3452.6717557251909" y="-315.49295774647891"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Reviews-->
         <scene sceneID="Fda-TB-VHy">
             <objects>
-                <tableViewController id="Nrj-eL-dfy" sceneMemberID="viewController">
+                <tableViewController title="Reviews" id="Nrj-eL-dfy" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lGO-uH-DZx">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -689,6 +740,7 @@
                             <outlet property="delegate" destination="Nrj-eL-dfy" id="UXF-To-Wya"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="IiU-od-VA3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMC-KI-6cl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

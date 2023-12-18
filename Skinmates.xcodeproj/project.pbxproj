@@ -16,6 +16,7 @@
 		05B790E32B2C577A0069764B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B790E22B2C577A0069764B /* ProductTableViewCell.swift */; };
 		05B790E52B2D39940069764B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B790E42B2D39940069764B /* DetailViewController.swift */; };
 		05B9191D2B2D81CC00EEA7E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9191C2B2D81CC00EEA7E8 /* ProfileViewController.swift */; };
+		05E77B982B30533E00C1E29C /* CreateReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E77B972B30533E00C1E29C /* CreateReviewViewController.swift */; };
 		05F5DAF42B08A5720028DB4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5DAF32B08A5720028DB4B /* AppDelegate.swift */; };
 		05F5DAF62B08A5720028DB4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5DAF52B08A5720028DB4B /* SceneDelegate.swift */; };
 		05F5DAF82B08A5720028DB4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5DAF72B08A5720028DB4B /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		05B790E22B2C577A0069764B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		05B790E42B2D39940069764B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		05B9191C2B2D81CC00EEA7E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		05E77B972B30533E00C1E29C /* CreateReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewController.swift; sourceTree = "<group>"; };
 		05F5DAF02B08A5720028DB4B /* projectLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F5DAF32B08A5720028DB4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05F5DAF52B08A5720028DB4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				056798EE2B21908500A515A4 /* DatabaseFunctions.swift */,
 				05B790E22B2C577A0069764B /* ProductTableViewCell.swift */,
 				05B9191C2B2D81CC00EEA7E8 /* ProfileViewController.swift */,
+				05E77B972B30533E00C1E29C /* CreateReviewViewController.swift */,
 			);
 			path = projectLab;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E77B982B30533E00C1E29C /* CreateReviewViewController.swift in Sources */,
 				056798EF2B21908500A515A4 /* DatabaseFunctions.swift in Sources */,
 				0503B10B2B1D96910073D1A0 /* Model.swift in Sources */,
 				05A5B2AE2B1B3759000C6FF3 /* TabViewController.swift in Sources */,
