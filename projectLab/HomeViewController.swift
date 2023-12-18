@@ -17,7 +17,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // bentuk json = key : value
     var makeupList = [[String:Any]]()
-    let baseURL = "https://makeup-api.herokuapp.com/api/v1/products.json?rating_greater_than=3.5&rating_less_than=5.0&price_greater_than=5.0"
+    let baseURL = "https://makeup-api.herokuapp.com/api/v1/products.json?rating_greater_than=3.5&rating_less_than=4.5&price_greater_than=5.0"
     var makeup:Makeup?
     @IBOutlet weak var makeupTable: UITableView!
     
@@ -62,10 +62,29 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 DispatchQueue.main.async {
                     self.makeupTable.reloadData()
                 }
+                var dbJson =  self.db
+                if(dbJson.getProducts(contxt: self.contxt).count==0){
+                    print("masuk")
+                    for makeup in self.makeupList {
+                        print(makeup["brand"])
+                        let name = makeup["name"] as! String
+                        var brand = makeup["brand"] as? String
+                        let price = makeup["price"] as! String
+                        let type = makeup["product_type"] as! String
+                        if(brand == nil){
+                            brand = "Null"
+                        }
+                        var makeupItem = Makeup(name: name, brand: brand, price: price, type: type)
+                        dbJson.insertProduct(contxt: self.contxt, product: makeupItem)
+                        
+                    }
+                }
             }catch {
                 
             }
+            
         }.resume()
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,7 +95,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell") as! ProductTableViewCell
         cell.name.text = makeupList[indexPath.row]["name"] as! String
-        cell.brand.text = makeupList[indexPath.row]["brand"] as! String
+        cell.brand.text = makeupList[indexPath.row]["brand"] as? String
         cell.type.text = makeupList[indexPath.row]["product_type"] as! String
         cell.price.text = "$\(makeupList[indexPath.row]["price"]!)" as! String
         
@@ -97,7 +116,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         makeup = Makeup(
             name: makeupList[indexPath.row]["name"] as! String,
             brand: makeupList[indexPath.row]["brand"] as! String,
-            price: Double(makeupList[indexPath.row]["price"] as! String),
+            price: makeupList[indexPath.row]["price"] as! String,
             type: makeupList[indexPath.row]["product_type"] as! String,
             img: makeupList[indexPath.row]["api_featured_image"] as! String
         )

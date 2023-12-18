@@ -17,7 +17,7 @@ struct Person {
 struct Makeup {
     var name: String?
     var brand: String?
-    var price: Double?
+    var price: String?
     var type:String?
     var img:String?
 }
