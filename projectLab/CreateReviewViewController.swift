@@ -22,7 +22,7 @@ class CreateReviewViewController: UIViewController {
     
 
     @IBAction func onPostClick(_ sender: Any) {
-        
+        print(<#T##items: Any...##Any#>)
     }
     
 

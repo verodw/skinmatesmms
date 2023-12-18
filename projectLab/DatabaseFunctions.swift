@@ -120,8 +120,9 @@ class Database {
     }
 
 
-    func getProduct(contxt:NSManagedObjectContext, name:String) -> Makeup{
-        var product:Makeup?
+    func getProductID(contxt:NSManagedObjectContext, name:String) -> Makeup{
+//        var product:Makeup?
+        var productID:UUID?
 
         // check all user
         getProducts(contxt: contxt)
@@ -134,13 +135,15 @@ class Database {
             let result = try contxt.fetch(request) as! [NSManagedObject]
 
             for data in result {
-                product = Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String)
+                productID = data.objectID
+//                product = Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String)
             }
             
         } catch {
             print("Data loading failure")
         }
 
-        return product ?? Makeup(name: nil, brand: nil, price: nil, type: nil)
+//        return product ?? Makeup(name: nil, brand: nil, price: nil, type: nil)
+        return productID ?? nil
     }
 }
