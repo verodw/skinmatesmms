@@ -55,15 +55,19 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         if let makeup = makeup {
-            nameLabel.text = makeup.name
-            brandLabel.text = makeup.brand
-            typeLabel.text = makeup.type
-            priceLabel.text = "$\(makeup.price)"
+            nameLabel.text = makeup.name!
+            brandLabel.text = makeup.brand!
+            typeLabel.text = makeup.type!
+//            priceLabel.text = "$\(makeup.price!)"
             
-            // Check if imageURL is available and not empty
+            if let price = makeup.price {
+                        priceLabel.text = "$\(price)"
+                    } else {
+                        priceLabel.text = "Price not available"
+                    }
+            
             if var imageURLString = makeup.img, !imageURLString.isEmpty {
                 
-                // Check if "https:" is already present in the URL
                 if !imageURLString.lowercased().hasPrefix("https:") {
                     imageURLString = "https:" + imageURLString
                 }
