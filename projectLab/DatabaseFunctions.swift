@@ -166,13 +166,46 @@ class Database {
     }
     
     
-    // buat dapetin reviews nya
+    // buat dapetin reviews nya berdasarkan produk
     func getReviewsByProduct(contxt:NSManagedObjectContext, productName:String) -> [MakeupReview] {
         var reviews = [MakeupReview]()
 
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Review")
         
         request.predicate = NSPredicate(format: "makeupname=%@", productName)
+
+        do {
+            let result = try contxt.fetch(request) as! [NSManagedObject]
+
+            for data in result {
+                reviews.append(
+                MakeupReview(
+                    userEmail: data.value(forKey: "useremail") as! String,
+                    productName: data.value(forKey: "makeupname") as! String,
+                    rating: data.value(forKey: "rating") as! String,
+                    desc: data.value(forKey: "desc") as! String
+                ))
+            }
+
+            for i in reviews {
+                print(i)
+            }
+
+        } catch {
+            print("Data loading failure")
+        }
+
+        return reviews
+    }
+    
+    
+    // buat dapetin reviews nya berdasarkan user
+    func getReviewsByUser(contxt:NSManagedObjectContext, userEmail:String) -> [MakeupReview] {
+        var reviews = [MakeupReview]()
+
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Review")
+        
+        request.predicate = NSPredicate(format: "useremail=%@", userEmail)
 
         do {
             let result = try contxt.fetch(request) as! [NSManagedObject]

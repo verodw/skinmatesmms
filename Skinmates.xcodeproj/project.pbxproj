@@ -17,6 +17,10 @@
 		05B790E52B2D39940069764B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B790E42B2D39940069764B /* DetailViewController.swift */; };
 		05B9191D2B2D81CC00EEA7E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9191C2B2D81CC00EEA7E8 /* ProfileViewController.swift */; };
 		05E77B982B30533E00C1E29C /* CreateReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E77B972B30533E00C1E29C /* CreateReviewViewController.swift */; };
+		05E77B9A2B315CDD00C1E29C /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E77B992B315CDD00C1E29C /* ReviewTableViewController.swift */; };
+		05E77B9C2B315EDC00C1E29C /* ProductReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E77B9B2B315EDC00C1E29C /* ProductReviewTableViewCell.swift */; };
+		05E77B9E2B316B9F00C1E29C /* UserReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E77B9D2B316B9F00C1E29C /* UserReviewTableViewCell.swift */; };
+		05E77BA02B316C1200C1E29C /* UserReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E77B9F2B316C1200C1E29C /* UserReviewsViewController.swift */; };
 		05F5DAF42B08A5720028DB4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5DAF32B08A5720028DB4B /* AppDelegate.swift */; };
 		05F5DAF62B08A5720028DB4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5DAF52B08A5720028DB4B /* SceneDelegate.swift */; };
 		05F5DAF82B08A5720028DB4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5DAF72B08A5720028DB4B /* ViewController.swift */; };
@@ -36,6 +40,10 @@
 		05B790E42B2D39940069764B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		05B9191C2B2D81CC00EEA7E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		05E77B972B30533E00C1E29C /* CreateReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewController.swift; sourceTree = "<group>"; };
+		05E77B992B315CDD00C1E29C /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		05E77B9B2B315EDC00C1E29C /* ProductReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReviewTableViewCell.swift; sourceTree = "<group>"; };
+		05E77B9D2B316B9F00C1E29C /* UserReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewTableViewCell.swift; sourceTree = "<group>"; };
+		05E77B9F2B316C1200C1E29C /* UserReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewsViewController.swift; sourceTree = "<group>"; };
 		05F5DAF02B08A5720028DB4B /* projectLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F5DAF32B08A5720028DB4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05F5DAF52B08A5720028DB4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +101,10 @@
 				05B790E22B2C577A0069764B /* ProductTableViewCell.swift */,
 				05B9191C2B2D81CC00EEA7E8 /* ProfileViewController.swift */,
 				05E77B972B30533E00C1E29C /* CreateReviewViewController.swift */,
+				05E77B992B315CDD00C1E29C /* ReviewTableViewController.swift */,
+				05E77B9B2B315EDC00C1E29C /* ProductReviewTableViewCell.swift */,
+				05E77B9D2B316B9F00C1E29C /* UserReviewTableViewCell.swift */,
+				05E77B9F2B316C1200C1E29C /* UserReviewsViewController.swift */,
 			);
 			path = projectLab;
 			sourceTree = "<group>";
@@ -179,8 +191,12 @@
 				05A5B2842B1B2A77000C6FF3 /* RegisViewController.swift in Sources */,
 				05F5DAF42B08A5720028DB4B /* AppDelegate.swift in Sources */,
 				05B9191D2B2D81CC00EEA7E8 /* ProfileViewController.swift in Sources */,
+				05E77B9A2B315CDD00C1E29C /* ReviewTableViewController.swift in Sources */,
+				05E77B9E2B316B9F00C1E29C /* UserReviewTableViewCell.swift in Sources */,
 				05F5DAF62B08A5720028DB4B /* SceneDelegate.swift in Sources */,
 				05B790E52B2D39940069764B /* DetailViewController.swift in Sources */,
+				05E77B9C2B315EDC00C1E29C /* ProductReviewTableViewCell.swift in Sources */,
+				05E77BA02B316C1200C1E29C /* UserReviewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

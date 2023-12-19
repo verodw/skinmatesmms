@@ -96,6 +96,11 @@ class DetailViewController: UIViewController {
                     nextPage.makeup = makeup
             }
         }
+        else if segue.identifier == "showReviewSegue" {
+                if let nextPage = segue.destination as? ReviewTableViewController {
+                    nextPage.makeup = makeup
+            }
+        }
     }
 
 }
