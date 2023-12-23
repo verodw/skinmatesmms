@@ -80,7 +80,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         dbJson.insertProduct(contxt: self.contxt, product: makeupItem)
                         
                     }
-                }
+                } 
             }catch {
                 
             }
