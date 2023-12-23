@@ -28,7 +28,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         contxt = appDelegate.persistentContainer.viewContext
 
-        // Do any additional setup after loading the view.
         let email = UserDefaults.standard.string(forKey: "userEmail")
         activeUser = db.getUser(contxt: contxt, email: email!)
         print(activeUser!.name)
@@ -104,15 +103,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.brand.text = makeupList[indexPath.row]["brand"] as? String
         cell.type.text = makeupList[indexPath.row]["product_type"] as! String
         cell.price.text = "$\(makeupList[indexPath.row]["price"]!)" as! String
-        
-        //
-//        if let imagePath = makeupList[indexPath.row]["api_featured_image"], let image = UIImage(contentsOfFile: imagePath as! String) {
-//               // Mengatur gambar pada UIImageView jika imagePath ada dan file gambar dapat dibaca
-//               cell.imageProduct.image = image
-//           } else {
-//               // Mengatur gambar default jika imagePath tidak ada atau file gambar tidak dapat dibaca
-//               cell.imageProduct.image = UIImage(named: "defaultImage")
-//           }
+
         if let imagePath = makeupList[indexPath.row]["api_featured_image"] as? String {
             let imageUrlString = "https:" + imagePath
             if let imageUrl = URL(string: imageUrlString), let imageData = try? Data(contentsOf: imageUrl) {

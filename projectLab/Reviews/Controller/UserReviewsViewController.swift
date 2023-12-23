@@ -29,7 +29,6 @@ class UserReviewsViewController: UIViewController, UITableViewDataSource, UITabl
         
         let email = UserDefaults.standard.string(forKey: "userEmail")
         activeUser = db.getUser(contxt: contxt, email: email!)
-        // Do any additional setup after loading the view.
         reviewList = db.getReviewsByUser(contxt: contxt, userEmail: email!)
         
     }

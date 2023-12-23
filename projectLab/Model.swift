@@ -8,7 +8,6 @@
 import Foundation
 
 struct Person {
-//    var id: UUID?
     var name: String?
     var email: String?
     var pass: String?

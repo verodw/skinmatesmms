@@ -24,7 +24,6 @@ class CreateReviewViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         contxt = appDelegate.persistentContainer.viewContext
         
-        // Do any additional setup after loading the view.
         let email = UserDefaults.standard.string(forKey: "userEmail")
         activeUser = db.getUser(contxt: contxt, email: email!)
         print(makeup)
@@ -51,7 +50,7 @@ class CreateReviewViewController: UIViewController {
                         showAlertSuccess(message: "Your review has been updated!")
                     }
                     else {
-                        // Menyimpan review ke database (asumsikan db dan contxt sudah didefinisikan)
+                        // Menyimpan review ke database
                         print("masuk insert")
                         db.insertReview(contxt: contxt, review: review)
                         showAlertSuccess(message: "Your review has been added!")
