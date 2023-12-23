@@ -439,6 +439,7 @@
                                         <connections>
                                             <outlet property="brand" destination="EbB-47-TIa" id="fbB-EJ-afi"/>
                                             <outlet property="desc" destination="GCi-x0-lpg" id="K4f-1K-71M"/>
+                                            <outlet property="productImage" destination="0im-64-Y5x" id="5FN-Yi-b9p"/>
                                             <outlet property="productName" destination="uqf-Lm-8Lr" id="WJX-lj-jSm"/>
                                             <outlet property="rating" destination="nV6-ON-JBn" id="6xw-Cs-IvF"/>
                                         </connections>

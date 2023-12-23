@@ -13,6 +13,8 @@ class UserReviewTableViewCell: UITableViewCell {
     @IBOutlet weak var brand: UILabel!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var productImage: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

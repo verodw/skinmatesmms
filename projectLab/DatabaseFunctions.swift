@@ -86,6 +86,7 @@ class Database {
         newProduct.setValue(product.brand, forKey: "brand")
         newProduct.setValue(product.price, forKey: "price")
         newProduct.setValue(product.type, forKey: "type")
+        newProduct.setValue(product.img, forKey: "image")
         do {
             try contxt.save()
             makeupArr = getProducts(contxt:contxt)
@@ -106,7 +107,7 @@ class Database {
             for data in result {
                 print(data.objectID)
                 makeupArr.append(
-                    Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String))
+                    Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String, img: data.value(forKey: "image") as! String))
             }
 
             for i in makeupArr {
@@ -135,7 +136,7 @@ class Database {
             let result = try contxt.fetch(request) as! [NSManagedObject]
 
             for data in result {
-                product = Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String)
+                product = Makeup(name: data.value(forKey: "name") as! String, brand: data.value(forKey: "brand") as! String, price: data.value(forKey: "price") as! String, type: data.value(forKey: "type") as! String, img: data.value(forKey: "image") as! String)
             }
             
         } catch {

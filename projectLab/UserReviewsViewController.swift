@@ -50,13 +50,25 @@ class UserReviewsViewController: UIViewController, UITableViewDataSource, UITabl
         let product = db.getProduct(contxt: contxt, name: productName!)
         let rating = reviewList[indexPath.row].rating
         let desc = reviewList[indexPath.row].desc
+        let image = db.getProduct(contxt: contxt, name: productName!).img
+        print(image)
         
         cell.productName.text = productName!
         cell.brand.text = product.brand!
         cell.rating.text = rating!
         cell.desc.text = desc!
         
-        // kurang image, ternyata perlu disimpen linknya di core data
+        if let imagePath = image as? String {
+            let imageUrlString = "https:" + imagePath
+            if let imageUrl = URL(string: imageUrlString), let imageData = try? Data(contentsOf: imageUrl) {
+                   let image = UIImage(data: imageData)
+                cell.productImage.image = image
+               } else {
+                   cell.productImage.image = UIImage(named: "defaultImage")
+               }
+           } else {
+               cell.productImage.image = UIImage(named: "defaultImage")
+           }
         
         return cell
     }

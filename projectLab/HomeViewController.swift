@@ -71,11 +71,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         var brand = makeup["brand"] as? String
                         let price = makeup["price"] as! String
                         let type = makeup["product_type"] as! String
+                        let image = makeup["api_featured_image"] as! String
                         // karena dalam api terdapat brand dengan nilai null, maka agar program tidak error saya set jadi string "null"
                         if(brand == nil){
                             brand = "Null"
                         }
-                        var makeupItem = Makeup(name: name, brand: brand, price: price, type: type)
+                        var makeupItem = Makeup(name: name, brand: brand, price: price, type: type, img: image)
                         dbJson.insertProduct(contxt: self.contxt, product: makeupItem)
                         
                     }
