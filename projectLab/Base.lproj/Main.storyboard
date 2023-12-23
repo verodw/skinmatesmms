@@ -250,7 +250,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ai-FI-X08">
-                                <rect key="frame" x="67" y="157" width="48" height="22"/>
+                                <rect key="frame" x="67" y="157" width="47.333333333333343" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -298,7 +298,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogy-fn-EQF">
-                                <rect key="frame" x="67" y="248" width="78" height="22"/>
+                                <rect key="frame" x="67" y="248" width="77.666666666666686" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -322,24 +322,23 @@
                         <constraints>
                             <constraint firstItem="QmR-nc-KyS" firstAttribute="bottom" secondItem="9xl-qJ-Xtr" secondAttribute="bottom" constant="214" id="1EU-ax-oce"/>
                             <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="9KJ-Zw-OR0" secondAttribute="trailing" constant="16" id="1kc-Qf-KFE"/>
-                            <constraint firstItem="ogy-fn-EQF" firstAttribute="top" secondItem="UqB-xl-2aM" secondAttribute="bottom" constant="23" id="48y-Qf-IIL"/>
+                            <constraint firstItem="UqB-xl-2aM" firstAttribute="leading" secondItem="ZO0-PU-dkE" secondAttribute="trailing" constant="9" id="3aD-BF-CcK"/>
                             <constraint firstItem="DP9-GL-ndb" firstAttribute="top" secondItem="dN1-1P-SuB" secondAttribute="bottom" constant="24" id="5C1-hv-FgK"/>
                             <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="dN1-1P-SuB" secondAttribute="trailing" constant="16" id="6mU-jZ-KUN"/>
                             <constraint firstItem="9xl-qJ-Xtr" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="136" id="9O6-px-bub"/>
-                            <constraint firstItem="6ai-FI-X08" firstAttribute="top" secondItem="9KJ-Zw-OR0" secondAttribute="bottom" constant="58" id="IDO-Hu-mLU"/>
+                            <constraint firstItem="ogy-fn-EQF" firstAttribute="top" secondItem="UqB-xl-2aM" secondAttribute="bottom" constant="23" id="BmO-8e-Ckg"/>
+                            <constraint firstItem="ogy-fn-EQF" firstAttribute="leading" secondItem="EV6-ov-bPU" secondAttribute="trailing" constant="8" symbolic="YES" id="IA4-Vx-Ed6"/>
                             <constraint firstItem="ZO0-PU-dkE" firstAttribute="top" secondItem="JId-es-KkY" secondAttribute="bottom" constant="8" id="JJf-gr-P7F"/>
-                            <constraint firstItem="ogy-fn-EQF" firstAttribute="leading" secondItem="EV6-ov-bPU" secondAttribute="trailing" constant="8" symbolic="YES" id="MTF-Kf-IYP"/>
-                            <constraint firstItem="UqB-xl-2aM" firstAttribute="top" secondItem="6ai-FI-X08" secondAttribute="bottom" constant="24" id="O77-fK-AB7"/>
                             <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="ubK-ei-aRJ" secondAttribute="trailing" constant="16" id="PvN-oW-Szo"/>
-                            <constraint firstItem="6ai-FI-X08" firstAttribute="leading" secondItem="JId-es-KkY" secondAttribute="trailing" constant="8" symbolic="YES" id="WER-w6-efb"/>
-                            <constraint firstItem="9xl-qJ-Xtr" firstAttribute="top" secondItem="ogy-fn-EQF" secondAttribute="bottom" constant="250" id="YeE-lO-z5w"/>
+                            <constraint firstItem="UqB-xl-2aM" firstAttribute="top" secondItem="6ai-FI-X08" secondAttribute="bottom" constant="24" id="WUh-ou-pu3"/>
                             <constraint firstItem="JId-es-KkY" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="29" id="cb7-Bi-G1F"/>
+                            <constraint firstItem="6ai-FI-X08" firstAttribute="leading" secondItem="JId-es-KkY" secondAttribute="trailing" constant="8" symbolic="YES" id="epv-gI-OEY"/>
+                            <constraint firstItem="6ai-FI-X08" firstAttribute="top" secondItem="9KJ-Zw-OR0" secondAttribute="bottom" constant="58" id="fZg-M8-WvL"/>
                             <constraint firstItem="9KJ-Zw-OR0" firstAttribute="top" secondItem="QmR-nc-KyS" secondAttribute="top" constant="16" id="fja-PP-o1t"/>
                             <constraint firstItem="ZO0-PU-dkE" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="31" id="g07-Wa-glg"/>
                             <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="DP9-GL-ndb" secondAttribute="trailing" constant="16" id="i1a-so-Xi9"/>
                             <constraint firstItem="dN1-1P-SuB" firstAttribute="top" secondItem="ubK-ei-aRJ" secondAttribute="bottom" constant="24" id="i8x-zs-tNH"/>
                             <constraint firstItem="EV6-ov-bPU" firstAttribute="top" secondItem="ZO0-PU-dkE" secondAttribute="bottom" constant="10" id="idh-ww-O7A"/>
-                            <constraint firstItem="UqB-xl-2aM" firstAttribute="leading" secondItem="ZO0-PU-dkE" secondAttribute="trailing" constant="9" id="lc7-GM-R4F"/>
                             <constraint firstItem="9KJ-Zw-OR0" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="16" id="pEu-Ba-hog"/>
                             <constraint firstItem="EV6-ov-bPU" firstAttribute="leading" secondItem="QmR-nc-KyS" secondAttribute="leading" constant="30" id="q3H-a2-59E"/>
                             <constraint firstItem="QmR-nc-KyS" firstAttribute="trailing" secondItem="9xl-qJ-Xtr" secondAttribute="trailing" constant="136" id="teY-gA-8ah"/>
