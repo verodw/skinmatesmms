@@ -231,4 +231,66 @@ class Database {
 
         return reviews
     }
+    
+    
+    func getReviewsByUserAndProduct(contxt:NSManagedObjectContext, newReview:MakeupReview) -> MakeupReview{
+        var review: MakeupReview?
+
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Review")
+        
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: "useremail=%@", newReview.userEmail!), NSPredicate(format: "makeupname=%@", newReview.productName!)])
+
+        do {
+            let result = try contxt.fetch(request) as! [NSManagedObject]
+
+            for data in result {
+                review = MakeupReview(userEmail: data.value(forKey: "useremail") as! String, productName: data.value(forKey: "makeupname") as! String, rating: data.value(forKey: "rating") as! String, desc: data.value(forKey: "desc") as! String)
+            }
+
+        } catch {
+            print("Data loading failure")
+        }
+
+        return review ?? MakeupReview(userEmail: nil, productName: nil, rating: nil, desc: nil)
+    }
+    
+    
+    func deleteReview(contxt:NSManagedObjectContext, userEmail:String, makeupName:String){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Review")
+        
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: "useremail=%@", userEmail), NSPredicate(format: "makeupname=%@", makeupName)])
+        
+        do {
+            let result = try contxt.fetch(request) as! [NSManagedObject]
+            
+            for data in result {
+                contxt.delete(data)
+            }
+            
+            try contxt.save()
+        } catch {
+            print("Data deletion failure.")
+        }
+    }
+    
+    
+    
+    func updateReview(contxt:NSManagedObjectContext, newReview:MakeupReview){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Review")
+        
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [NSPredicate(format: "useremail=%@", newReview.userEmail!), NSPredicate(format: "makeupname=%@", newReview.productName!)])
+        
+        do {
+            let result = try contxt.fetch(request) as! [NSManagedObject]
+            
+            for data in result {
+                data.setValue(newReview.rating, forKey: "rating")
+                data.setValue(newReview.desc, forKey: "desc")
+            }
+            
+            try contxt.save()
+        } catch {
+            print("Data update failure.")
+        }
+    }
 }

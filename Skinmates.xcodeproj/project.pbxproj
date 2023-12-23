@@ -65,6 +65,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051BB1592B36D0630033FF2B /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				051BB15D2B36D0E60033FF2B /* Cell */,
+				051BB15E2B36D0F30033FF2B /* Controller */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
+		051BB15A2B36D0700033FF2B /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				051BB15C2B36D0CC0033FF2B /* Cell */,
+				051BB15B2B36D0C40033FF2B /* Controller */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		051BB15B2B36D0C40033FF2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				056798F02B21927200A515A4 /* HomeViewController.swift */,
+				05B790E42B2D39940069764B /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		051BB15C2B36D0CC0033FF2B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				05B790E22B2C577A0069764B /* ProductTableViewCell.swift */,
+				05E77B9B2B315EDC00C1E29C /* ProductReviewTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		051BB15D2B36D0E60033FF2B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				05E77B9D2B316B9F00C1E29C /* UserReviewTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		051BB15E2B36D0F30033FF2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				05E77B9F2B316C1200C1E29C /* UserReviewsViewController.swift */,
+				05E77B972B30533E00C1E29C /* CreateReviewViewController.swift */,
+				05E77B992B315CDD00C1E29C /* ReviewTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		05F5DAE72B08A5720028DB4B = {
 			isa = PBXGroup;
 			children = (
@@ -84,27 +138,21 @@
 		05F5DAF22B08A5720028DB4B /* projectLab */ = {
 			isa = PBXGroup;
 			children = (
+				051BB15A2B36D0700033FF2B /* Product */,
+				051BB1592B36D0630033FF2B /* Reviews */,
 				05F5DAF32B08A5720028DB4B /* AppDelegate.swift */,
 				05A5B2AD2B1B3759000C6FF3 /* TabViewController.swift */,
+				05B9191C2B2D81CC00EEA7E8 /* ProfileViewController.swift */,
 				05F5DAF52B08A5720028DB4B /* SceneDelegate.swift */,
 				05F5DAF72B08A5720028DB4B /* ViewController.swift */,
 				05F5DAF92B08A5720028DB4B /* Main.storyboard */,
-				05B790E42B2D39940069764B /* DetailViewController.swift */,
 				05A5B2852B1B2DA9000C6FF3 /* projectLab.xcdatamodeld */,
 				05A5B2832B1B2A77000C6FF3 /* RegisViewController.swift */,
 				05F5DAFC2B08A5720028DB4B /* Assets.xcassets */,
 				05F5DAFE2B08A5720028DB4B /* LaunchScreen.storyboard */,
 				05F5DB012B08A5720028DB4B /* Info.plist */,
 				0503B10A2B1D96910073D1A0 /* Model.swift */,
-				056798F02B21927200A515A4 /* HomeViewController.swift */,
 				056798EE2B21908500A515A4 /* DatabaseFunctions.swift */,
-				05B790E22B2C577A0069764B /* ProductTableViewCell.swift */,
-				05B9191C2B2D81CC00EEA7E8 /* ProfileViewController.swift */,
-				05E77B972B30533E00C1E29C /* CreateReviewViewController.swift */,
-				05E77B992B315CDD00C1E29C /* ReviewTableViewController.swift */,
-				05E77B9B2B315EDC00C1E29C /* ProductReviewTableViewCell.swift */,
-				05E77B9D2B316B9F00C1E29C /* UserReviewTableViewCell.swift */,
-				05E77B9F2B316C1200C1E29C /* UserReviewsViewController.swift */,
 			);
 			path = projectLab;
 			sourceTree = "<group>";

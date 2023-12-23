@@ -28,12 +28,20 @@ class UserReviewsViewController: UIViewController, UITableViewDataSource, UITabl
         userReviewsTable.delegate = self
         
         let email = UserDefaults.standard.string(forKey: "userEmail")
-        
+        activeUser = db.getUser(contxt: contxt, email: email!)
         // Do any additional setup after loading the view.
         reviewList = db.getReviewsByUser(contxt: contxt, userEmail: email!)
         
     }
     
+    //  delete
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                db.deleteReview(contxt: contxt, userEmail: activeUser!.email!, makeupName: reviewList[indexPath.row].productName!)
+                reviewList.remove(at: indexPath.row)
+                userReviewsTable.reloadData()
+            }
+        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reviewList.count
@@ -73,5 +81,19 @@ class UserReviewsViewController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let productName = reviewList[indexPath.row].productName
+        var makeup = db.getProduct(contxt: contxt, name: productName!)
+        
+        if let nextview = storyboard?.instantiateViewController(withIdentifier: "Create Review Page") {
+            let updateView = nextview as! CreateReviewViewController
+
+            updateView.makeup = makeup
+
+            navigationController?.pushViewController(updateView, animated: true)
+        }
+    }
 
 }
