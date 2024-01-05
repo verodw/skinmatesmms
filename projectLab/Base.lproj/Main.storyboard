@@ -465,7 +465,7 @@
                             <constraint firstItem="hPu-nm-ZYQ" firstAttribute="bottom" secondItem="NC7-rl-Bjj" secondAttribute="bottom" constant="25" id="vSi-Gg-SXu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Review" image="cart.fill" catalog="system" id="RB1-hR-7YS"/>
+                    <tabBarItem key="tabBarItem" title="Review" image="calendar.badge.clock" catalog="system" id="RB1-hR-7YS"/>
                     <connections>
                         <outlet property="userReviewsTable" destination="NC7-rl-Bjj" id="PZT-pD-s4i"/>
                     </connections>
@@ -850,7 +850,7 @@
     <resources>
         <image name="bgpink" width="393" height="852"/>
         <image name="bgprofile" width="393" height="852"/>
-        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <image name="colorbg" width="393" height="852"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="lock" catalog="system" width="125" height="128"/>
